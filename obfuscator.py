@@ -15,7 +15,7 @@ def get_key_char(c):
 def obfuscate_str(s):
     os = ''
     for character in s:
-        h = character.encode('utf-8').hex()
+        h = character.encode('utf-8').hex().upper()
         os += get_key_char(h[0])
         os += get_key_char(h[1])
     return os
